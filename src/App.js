@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import "animate.css";
 
 function App() {
+  const audio = new Audio("./BabyImYours.mp3");
+
+  const start = () => {
+    audio.play();
+  };
+  const stop = () => {
+    audio.pause();
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="page-wrapper">
+      <div className="heart-app">
+        <h4 className="click-me">Click the heart!</h4>
+        <div className="title">
+          <h3 class="animate__animated animate__heartBeat">Baby I'm Yours</h3>
+          <h4>Happy Valentine's Day!</h4>
+          <h3>14/02/2022 </h3>
+          <h4>Susannah & Dylan </h4>
+          <button onClick={stop}>Stop</button>
+        </div>
+
+        <div className="heart" onClick={start}></div>
+      </div>
     </div>
   );
 }
