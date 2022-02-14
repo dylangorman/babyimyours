@@ -57,7 +57,7 @@ button:hover {
   width: 50px;
   opacity: 0.8;
 
-  box-shadow: 0px 0px 5px 01px #8f0e00;
+  /* box-shadow: 0px 0px 5px 01px #8f0e00; */
 }
 .heart:before,
 .heart:after {
